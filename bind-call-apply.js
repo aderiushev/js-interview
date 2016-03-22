@@ -12,3 +12,8 @@ var user = {
 showFullName.call(user, 'param1', 'param2') 
 // этот вызов идентичен
 showFullName.apply(user, ['param1', 'param2']);
+// установит новый контекст и вернёт функцию.
+var bindedShowFullName = showFullName.bind({
+  firstName: "Алексей",
+  lastName: "Пупкин"
+});
